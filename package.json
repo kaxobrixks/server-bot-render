@@ -1,0 +1,16 @@
+{
+  "name": "fedfanta-bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.93.1",
+    "axios": "^1.6.0",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
